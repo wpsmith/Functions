@@ -32,7 +32,6 @@
       "src/archives.php",
       "src/conditionals.php",
       "src/column-classes.php",
-      "src/debug.php",
       "src/images.php"
     ]
   }
