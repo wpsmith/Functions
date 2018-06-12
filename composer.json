@@ -1,0 +1,39 @@
+{
+  "name": "wpsmith/functions",
+  "description": "WordPress functions.",
+  "keywords": [
+    "wordpress",
+    "functions"
+  ],
+  "homepage": "https://github.com/wpsmith/Functions",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Travis Smith",
+      "email": "t@wpsmith.net",
+      "homepage": "http://wpsmith.net/",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/wpsmith/Functions/issues"
+  },
+  "require": {
+    "php": ">=5.2.4",
+    "wpsmith/debug": "0.0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "WPS\\": "src/"
+    },
+    "files": [
+      "src/lib/constants.php",
+      "src/lib/functions.php",
+      "src/lib/archives.php",
+      "src/lib/conditionals.php",
+      "src/lib/column-classes.php",
+      "src/lib/debug.php",
+      "src/lib/images.php"
+    ]
+  }
+}
