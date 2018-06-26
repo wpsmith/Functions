@@ -27,7 +27,6 @@
       "WPS\\": "src/"
     },
     "files": [
-      "src/constants.php",
       "src/functions.php",
       "src/archives.php",
       "src/conditionals.php",
