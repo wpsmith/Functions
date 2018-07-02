@@ -20,7 +20,7 @@
   },
   "require": {
     "php": ">=5.2.4",
-    "wpsmith/debug": "^0.0.1"
+    "wpsmith/debug": "dev-master"
   },
   "autoload": {
     "psr-4": {
