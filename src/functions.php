@@ -226,7 +226,7 @@ function plural( $word, $count = 2, $return_count = 0 ) {
  * @param  array        $array
  * @param  string|array $properties
  *
- * @return array
+ * @return array|bool
  */
 function ofilter( $array, $properties ) {
 	if ( empty( $array ) ) {
