@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'get_taxonomy_description' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_taxonomy_description' ) ) {
 	/**
 	 * Gets description to category / tag / taxonomy archive pages.
 	 *
@@ -53,7 +53,7 @@ if ( ! function_exists( 'get_taxonomy_description' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_author_description' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_author_description' ) ) {
 	/**
 	 * Gets description to author archive pages.
 	 *
@@ -74,7 +74,7 @@ if ( ! function_exists( 'get_author_description' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_cpt_archive_description' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_cpt_archive_description' ) ) {
 	/**
 	 * Gets description to relevant custom post type archive pages.
 	 *
@@ -96,7 +96,7 @@ if ( ! function_exists( 'get_cpt_archive_description' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_blog_template_description' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_blog_template_description' ) ) {
 	/**
 	 * Add custom heading and description to blog template pages.
 	 *

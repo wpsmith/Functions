@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'get_column_classes' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_column_classes' ) ) {
 	/**
 	 * Column Classes
 	 *
@@ -48,7 +48,7 @@ if ( ! function_exists( 'get_column_classes' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_column_classes_by_column_class' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_column_classes_by_column_class' ) ) {
 	/**
 	 * Column Classes.
 	 *
@@ -82,7 +82,7 @@ if ( ! function_exists( 'get_column_classes_by_column_class' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_column_class_num_by_column_class_name' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_column_class_num_by_column_class_name' ) ) {
 	/**
 	 * Gets column class number from column class string.
 	 *

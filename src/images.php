@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'add_image_size' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\add_image_size' ) ) {
 	/**
 	 * Conditionally registers a new image size if size doesn't already exist.
 	 *
@@ -43,7 +43,7 @@ if ( ! function_exists( 'add_image_size' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_image_sizes' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_image_sizes' ) ) {
 	/**
 	 * Get size information for all currently-registered image sizes.
 	 *
@@ -74,7 +74,7 @@ if ( ! function_exists( 'get_image_sizes' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_image_size' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_image_size' ) ) {
 	/**
 	 * Get size information for a specific image size.
 	 *
@@ -95,7 +95,7 @@ if ( ! function_exists( 'get_image_size' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_image_width' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_image_width' ) ) {
 	/**
 	 * Get the width of a specific image size.
 	 *
@@ -120,7 +120,7 @@ if ( ! function_exists( 'get_image_width' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_image_height' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_image_height' ) ) {
 	/**
 	 * Get the height of a specific image size.
 	 *
@@ -146,7 +146,7 @@ if ( ! function_exists( 'get_image_height' ) ) {
 }
 
 add_filter( 'genesis_pre_get_image', __NAMESPACE__ . '\genesis_pre_get_image', 10, 2 );
-if ( ! function_exists( 'genesis_pre_get_image' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\genesis_pre_get_image' ) ) {
 	/**
 	 * Short-circuit genesis_get_image to output oEmbed featured items.
 	 *

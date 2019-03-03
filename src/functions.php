@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'get_relative_path' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_relative_path' ) ) {
 	/**
 	 * Gets relative path based on ABSPATH.
 	 *
@@ -35,7 +35,7 @@ if ( ! function_exists( 'get_relative_path' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_relative_url' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_relative_url' ) ) {
 	/**
 	 * Gets relative URL based on site URL.
 	 *
@@ -55,7 +55,7 @@ if ( ! function_exists( 'get_relative_url' ) ) {
 	}
 }
 
-if ( ! function_exists( 'each' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\each' ) ) {
 	/**
 	 * Each loop helper.
 	 *
@@ -72,7 +72,7 @@ if ( ! function_exists( 'each' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_script_style_dependency' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\get_script_style_dependency' ) ) {
 	/**
 	 * Get a script's or style's dependencies.
 	 *
@@ -90,7 +90,7 @@ if ( ! function_exists( 'get_script_style_dependency' ) ) {
 	}
 }
 
-if ( ! function_exists( 'remove_post_type_entry_meta' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\remove_post_type_entry_meta' ) ) {
 	/**
 	 * Remove entry meta.
 	 */
@@ -99,7 +99,7 @@ if ( ! function_exists( 'remove_post_type_entry_meta' ) ) {
 	}
 }
 
-if ( ! function_exists( 'remove_post_type_entry_footer' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\remove_post_type_entry_footer' ) ) {
 	/**
 	 * Removes Genesis entry footer.
 	 */
@@ -110,7 +110,7 @@ if ( ! function_exists( 'remove_post_type_entry_footer' ) ) {
 	}
 }
 
-if ( ! function_exists( 'remove_post_type_after_entry' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\remove_post_type_after_entry' ) ) {
 	/**
 	 * Removes Genesis after entry Author Box and Widget Area.
 	 */
@@ -120,8 +120,8 @@ if ( ! function_exists( 'remove_post_type_after_entry' ) ) {
 	}
 }
 
-add_filter( 'wps_plural_exceptions', 'get_plural_exceptions' );
-if ( ! function_exists( 'get_plural_exceptions' ) ) {
+add_filter( 'wps_plural_exceptions', __NAMESPACE__ . '\get_plural_exceptions' );
+if ( ! function_exists( __NAMESPACE__ . '\get_plural_exceptions' ) ) {
 	/**
 	 * Gets plural exceptions.
 	 *
@@ -145,7 +145,7 @@ if ( ! function_exists( 'get_plural_exceptions' ) ) {
 	}
 }
 
-if ( ! function_exists( 'plural' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\plural' ) ) {
 	/**
 	 * Pluralizes words.
 	 *
@@ -224,7 +224,7 @@ if ( ! function_exists( 'plural' ) ) {
 	}
 }
 
-if ( ! function_exists( 'ofilter' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\ofilter' ) ) {
 	/**
 	 * Filter an array of objects.
 	 *
@@ -298,7 +298,7 @@ if ( ! function_exists( 'ofilter' ) ) {
 	}
 }
 
-if ( ! function_exists( 'add_action' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\add_action' ) ) {
 	/**
 	 * Hooks a function on to a specific action.
 	 *

@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'is_page_template' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\is_page_template' ) ) {
 	/**
 	 * Determine if a specified template is being used.
 	 *
@@ -42,7 +42,7 @@ if ( ! function_exists( 'is_page_template' ) ) {
 	}
 }
 
-if ( ! function_exists( 'is_pagetemplate_active' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\is_pagetemplate_active' ) ) {
 	/**
 	 * Determines whether a particular page template is active.
 	 *
@@ -62,7 +62,7 @@ if ( ! function_exists( 'is_pagetemplate_active' ) ) {
 	}
 }
 
-if ( ! function_exists( 'is_first_time' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\is_first_time' ) ) {
 	/**
 	 * Sets a 30-day cookie to identify a users' first time visit.
 	 *
@@ -81,7 +81,7 @@ if ( ! function_exists( 'is_first_time' ) ) {
 	}
 }
 
-if ( ! function_exists( 'is_external_host' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\is_external_host' ) ) {
 	/**
 	 * Whether the URL is an external URL.
 	 *
@@ -94,7 +94,7 @@ if ( ! function_exists( 'is_external_host' ) ) {
 	}
 }
 
-if ( ! function_exists( 'is_debug' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\is_debug' ) ) {
 	/**
 	 * Whether site is in debug mode.
 	 *
@@ -105,7 +105,7 @@ if ( ! function_exists( 'is_debug' ) ) {
 	}
 }
 
-if ( ! function_exists( 'is_cron_disabled' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\is_cron_disabled' ) ) {
 	/**
 	 * Determines whether cron is disabled or not.
 	 *
@@ -116,7 +116,7 @@ if ( ! function_exists( 'is_cron_disabled' ) ) {
 	}
 }
 
-if ( ! function_exists( 'is_doing_cron' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\is_doing_cron' ) ) {
 	/**
 	 * Determines whether site is doing a CRON job.
 	 * @return bool
@@ -129,7 +129,7 @@ if ( ! function_exists( 'is_doing_cron' ) ) {
 	}
 }
 
-if ( ! function_exists( 'has_3_column_layout' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\has_3_column_layout' ) ) {
 	/**
 	 * Whether the theme supports 3 column layouts.
 	 *
@@ -154,7 +154,7 @@ if ( ! function_exists( 'has_3_column_layout' ) ) {
 	}
 }
 
-if ( ! function_exists( 'is_plugin_active' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\is_plugin_active' ) ) {
 	/**
 	 * Check whether a plugin is active.
 	 *
@@ -179,7 +179,7 @@ if ( ! function_exists( 'is_plugin_active' ) ) {
 	}
 }
 
-if ( ! function_exists( 'is_heartbeat' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\is_heartbeat' ) ) {
 	/**
 	 * Checks to see if a heartbeat is resulting in activity.
 	 *
@@ -190,7 +190,7 @@ if ( ! function_exists( 'is_heartbeat' ) ) {
 	}
 }
 
-if ( ! function_exists( 'is_doing_ajax' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\is_doing_ajax' ) ) {
 	/**
 	 * Checks to see if DOING_AJAX.
 	 *
@@ -201,7 +201,7 @@ if ( ! function_exists( 'is_doing_ajax' ) ) {
 	}
 }
 
-if ( ! function_exists( 'is_wp_cli' ) ) {
+if ( ! function_exists( __NAMESPACE__ . '\is_wp_cli' ) ) {
 	/**
 	 * Checks to see if WP_CLI.
 	 *
