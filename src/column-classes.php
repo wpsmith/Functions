@@ -23,78 +23,84 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Column Classes
- *
- * @param int    $columns       How many columns content should be broken into.
- * @param int    $count         The current post in the loop (starts at 0).
- * @param string $extra_classes Any additional classes to add on all posts.
- *
- * @return string $classes
- */
-function get_column_classes( $columns = 2, $count = 0, $extra_classes = '' ) {
-	$column_classes = array( '', 'full-width', 'one-half', 'one-third', 'one-fourth', 'one-fifth', 'one-sixth' );
+if ( ! function_exists( 'get_column_classes' ) ) {
+	/**
+	 * Column Classes
+	 *
+	 * @param int $columns How many columns content should be broken into.
+	 * @param int $count The current post in the loop (starts at 0).
+	 * @param string $extra_classes Any additional classes to add on all posts.
+	 *
+	 * @return string $classes
+	 */
+	function get_column_classes( $columns = 2, $count = 0, $extra_classes = '' ) {
+		$column_classes = array( '', 'full-width', 'one-half', 'one-third', 'one-fourth', 'one-fifth', 'one-sixth' );
 
-	$output = $column_classes[ $columns ];
-	if ( 0 === $count || 0 === $count % $columns ) {
-		$output .= ' first';
-	}
-	if ( $extra_classes ) {
-		$output .= ' ' . $extra_classes;
-	}
+		$output = $column_classes[ $columns ];
+		if ( 0 === $count || 0 === $count % $columns ) {
+			$output .= ' first';
+		}
+		if ( $extra_classes ) {
+			$output .= ' ' . $extra_classes;
+		}
 
-	return $output;
+		return $output;
+	}
 }
 
-/**
- * Column Classes.
- *
- * @param string $column_class  How many columns content should be broken into.
- * @param int    $count         The current post in the loop (starts at 0).
- * @param string $extra_classes Any additional classes to add on all posts.
- *
- * @return string $classes
- */
-function get_column_classes_by_column_class( $column_class = '', $count = 0, $extra_classes = '' ) {
-	$column_classes = array(
-		'',
-		'',
-		'one-half',
-		'one-third',
-		'one-fourth',
-		'one-fifth',
-		'one-sixth',
-	);
+if ( ! function_exists( 'get_column_classes_by_column_class' ) ) {
+	/**
+	 * Column Classes.
+	 *
+	 * @param string $column_class How many columns content should be broken into.
+	 * @param int $count The current post in the loop (starts at 0).
+	 * @param string $extra_classes Any additional classes to add on all posts.
+	 *
+	 * @return string $classes
+	 */
+	function get_column_classes_by_column_class( $column_class = '', $count = 0, $extra_classes = '' ) {
+		$column_classes = array(
+			'',
+			'',
+			'one-half',
+			'one-third',
+			'one-fourth',
+			'one-fifth',
+			'one-sixth',
+		);
 
-	$output  = $column_class;
-	$columns = array_search( $column_class, $column_classes, true );
-	if ( 0 === $count || 0 === $count % $columns ) {
-		$output .= ' first';
-	}
-	if ( $extra_classes ) {
-		$output .= ' ' . $extra_classes;
-	}
+		$output  = $column_class;
+		$columns = array_search( $column_class, $column_classes, true );
+		if ( 0 === $count || 0 === $count % $columns ) {
+			$output .= ' first';
+		}
+		if ( $extra_classes ) {
+			$output .= ' ' . $extra_classes;
+		}
 
-	return $output;
+		return $output;
+	}
 }
 
-/**
- * Gets column class number from column class string.
- *
- * @param string $column_class Column class (e.g., 'one-third').
- *
- * @return false|int|string
- */
-function get_column_class_num_by_column_class_name( $column_class ) {
-	$column_classes = array(
-		'',
-		'',
-		'one-half',
-		'one-third',
-		'one-fourth',
-		'one-fifth',
-		'one-sixth',
-	);
+if ( ! function_exists( 'get_column_class_num_by_column_class_name' ) ) {
+	/**
+	 * Gets column class number from column class string.
+	 *
+	 * @param string $column_class Column class (e.g., 'one-third').
+	 *
+	 * @return false|int|string
+	 */
+	function get_column_class_num_by_column_class_name( $column_class ) {
+		$column_classes = array(
+			'',
+			'',
+			'one-half',
+			'one-third',
+			'one-fourth',
+			'one-fifth',
+			'one-sixth',
+		);
 
-	return array_search( $column_class, $column_classes, true );
+		return array_search( $column_class, $column_classes, true );
+	}
 }
