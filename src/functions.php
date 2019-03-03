@@ -307,8 +307,6 @@ if ( ! function_exists( 'add_action' ) ) {
 	 * one or more of its PHP functions are executed at these points, using the
 	 * Action API.
 	 *
-	 * @since 1.2.0
-	 *
 	 * @param string $tag The name of the action to which the $function_to_add is hooked.
 	 * @param callable $function_to_add The name of the function you wish to be called.
 	 * @param int $priority Optional. Used to specify the order in which the functions
@@ -317,10 +315,11 @@ if ( ! function_exists( 'add_action' ) ) {
 	 *                                  and functions with the same priority are executed
 	 *                                  in the order in which they were added to the action.
 	 * @param int $accepted_args Optional. The number of arguments the function accepts. Default 1.
+	 * @param array $args Args to pass to the function.
 	 */
-	function add_action( $tag, $function_to_add, $priority = 10, $accepted_args = 1 ) {
+	function add_action( $tag, $function_to_add, $priority = 10, $accepted_args = 1, $args = array() ) {
 		if ( did_action( $tag ) || doing_action( $tag ) ) {
-			call_user_func_array( $function_to_add, array() );
+			call_user_func_array( $function_to_add, (array) $args );
 		} else {
 			add_action( $tag, $function_to_add, $priority, $accepted_args );
 		}
